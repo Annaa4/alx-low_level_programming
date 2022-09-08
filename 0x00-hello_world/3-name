@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 gcc $CFILE -o cisfun
+=======
+gcc $CFILE -o cisfun
+>>>>>>> 6f3914162cd87b0d9ee6c966894b30992de10bf0
