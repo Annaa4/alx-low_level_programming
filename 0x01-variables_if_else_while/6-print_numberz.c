@@ -1,41 +1,5 @@
 #include <stdio.h>
 
-<<<<<<< HEAD
-
-
-/**
-
- * main - Prints all single digit numbers of base 10 starting from 0,
-
- *        only using putchar and without char variables.
-
- *
-
- * Return: Always 0.
-
- */
-
-int main(void)
-  
-{
-  
-  int num;
-  
-
-  
-  for (num = 0; num < 10; num++)
-    
-    putchar((num % 10) + '0');
-  
-
-  
-  putchar('\n');
-  
-
-  
-  return (0);
-  
-=======
 /**
  * main - Prints all single digit numbers of base 10 starting from 0,
  *        only using putchar and without char variables.
@@ -52,5 +16,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
->>>>>>> ec7b58b17341a05505a6202a31faa48fb22980bf
 }
