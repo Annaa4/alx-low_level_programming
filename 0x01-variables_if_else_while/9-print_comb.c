@@ -1,15 +1,16 @@
 #include <stdio.h>
 
-<<<<<<< HEAD
+#include <stdlib.h>
 
+#include <time.h>
 
 /**
 
- * main - Prints all possible combinations of single-digit numbers.
+ * main - Entry point
 
  *
 
- * Return: Always 0.
+ * Return: Always 0 (Success)
 
  */
 
@@ -17,29 +18,27 @@ int main(void)
   
 {
   
-  int num;
+  int d;
   
 
   
-  for (num = 0; num <= 9; num++)
+  for (d = '0'; d <= '9'; d++)
     
     {
       
-      putchar((num % 10) + '0');
+      putchar(d);
       
-      if (num == 9)
+      if (d != '9')
 	
-	continue;
-      
-
-      
-      putchar(',');
-      
-      putchar(' ');
+	{
+	  
+	  putchar(',');
+	  
+	  putchar(' ');
+	  
+	}
       
     }
-  
-
   
   putchar('\n');
   
@@ -47,28 +46,4 @@ int main(void)
   
   return (0);
   
-=======
-/**
- * main - Prints all possible combinations of single-digit numbers.
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int num;
-
-	for (num = 0; num <= 9; num++)
-	{
-		putchar((num % 10) + '0');
-		if (num == 9)
-			continue;
-		
-		putchar(',');
-		putchar(' ');
-	}
-
-	putchar('\n');
-
-	return (0);
->>>>>>> 25a612ab74f050a1af29d6b8b190e58f2b5cabf9
 }
