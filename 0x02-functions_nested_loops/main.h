@@ -1,5 +1,6 @@
 #ifndef ALX_A
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 #define ALX_A
 
@@ -31,6 +32,8 @@ void print_times_table(int n);
 
 
 =======
+=======
+>>>>>>> 3d3641c24b7b0e4f17e2b42b82c96e438f2d6b07
 #define ALX_A
 
 char _putchar(char c);
@@ -47,5 +50,4 @@ int add(int one, int two);
 void print_to_98(int n);
 void print_times_table(int n);
 
->>>>>>> 1b55f063267ade778f0c8d934793ac013c1e637c
 #endif /* ALX_H*/
