@@ -1,10 +1,10 @@
-#include "alx.h"
+#include "_pucthar.h"
 /**
  * Return: 0 on success.
  */
 int main(void)
 {
-	char c[] = "Alx";
+	char c[] = "_putchar";
 	int i;
 
 	for (i = 0; i < 9; i++)
