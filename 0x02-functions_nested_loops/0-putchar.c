@@ -1,4 +1,4 @@
-#include "alx.h"
+#include "_putchar.h"
 /**
  * main - Entry point
  *
@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char *sh = "Alx";
+	char *sh = "_putchar";
 
 	while (*sh)
 	{
