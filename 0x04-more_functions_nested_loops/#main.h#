@@ -1,0 +1,51 @@
+
+/**
+
+ * print_number - prints numbers
+
+ * @n: number to be printed
+
+ * Return:void
+
+ */
+
+
+
+void print_number(int n)
+  
+{
+  
+  unsigned int x;
+  
+
+  
+  x = n;
+  
+  if (n < 0)
+    
+    {
+      
+      _putchar(45);
+      
+      x = -n;
+      
+    }
+  
+  if (x / 10)
+    
+    print_number(x / 10);
+  
+  _putchar((x % 10) + '0');
+  
+}0;276;0cint _putchar(char c);
+int _isupper(int c);
+int _isdigit(int c);
+int mul(int a, int b);
+void print_numbers(void);
+void print_most_numbers(void);
+void more_numbers(void);
+void print_line(int n);
+void print_diagonal(int n);
+void print_square(int size);
+void print_triangle(int size);
+void print_number(int n);
