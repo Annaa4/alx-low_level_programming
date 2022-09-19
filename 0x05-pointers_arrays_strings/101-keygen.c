@@ -1,26 +1,28 @@
-#include <time.h>
-#include <stdio.h>
-#include <stdlib.h>
-/**
- * main - Program that generates random valid passwords
- * @void: Empty input
- *
- * Description: Program that generates random valid passwords
- * Return: 0 if works
- */
-int main(void)
-{
-	int i = 0, random, checksum;
+#include "main.h"
 
-	srand(time(NULL));
-	checksum = 2772;
-	while (checksum > 122)
+/**
+ * _atoi - convert a string to an integer.
+ * @s: char type string
+ * Return: integer converted
+ */
+
+int _atoi(char *s)
+{
+	int sign = 1, resp = 0, firstNum;
+
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
 	{
-		random = (rand() % 100);
-		printf("%c", random);
-		checksum -= random;
-		i++;
+		if (s[firstNum] == '-')
+		{
+			sign *= -1;
+		}
 	}
-	printf("%c", checksum);
-	return (0);
+
+	for (int i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
+	{
+		resp *= 10;
+		resp += (s[i] - 48);
+	}
+
+	return (sign * resp);
 }
