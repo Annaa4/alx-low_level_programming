@@ -1,28 +1,24 @@
-#include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * _atoi - convert a string to an integer.
- * @s: char type string
- * Return: integer converted
+ * main - generates keygen.
+ * Return: 0 Always.
  */
-
-int _atoi(char *s)
+int main(void)
 {
-	int sign = 1, resp = 0, firstNum;
+	int r = 0, c = 0;
+	time_t t;
 
-	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+	srand((unsigned int) time(&t));
+	while (c < 2772)
 	{
-		if (s[firstNum] == '-')
-		{
-			sign *= -1;
-		}
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
 	}
-
-	for (int i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
-	{
-		resp *= 10;
-		resp += (s[i] - 48);
-	}
-
-	return (sign * resp);
+	printf("%c\n", (2772 - c));
+	return (0);
 }
