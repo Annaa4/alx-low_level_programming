@@ -1,26 +1,24 @@
-#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 /**
- * main - Program that generates random valid passwords
- * @void: Empty input
- *
- * Description: Program that generates random valid passwords
- * Return: 0 if works
+ * main - generates keygen.
+ * Return: 0 Always.
  */
 int main(void)
 {
-	int i = 0, random, checksum;
+	int r = 0, c = 0;
+	time_t t;
 
-	srand(time(NULL));
-	checksum = 2772;
-	while (checksum > 122)
+	srand((unsigned int) time(&t));
+	while (c < 2772)
 	{
-		random = (rand() % 100);
-		printf("%c", random);
-		checksum -= random;
-		i++;
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
 	}
-	printf("%c", checksum);
+	printf("%c\n", (2772 - c));
 	return (0);
 }
