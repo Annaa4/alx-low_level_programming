@@ -1,105 +1,34 @@
 #include "main.h"
-<<<<<<< HEAD
-
+#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
+#include <ctype.h>
 /**
-
- * *cap_string - capitalizes all words of a string
-
- *
-
- * @a: int to check
-
- *
-
- * Return: 0 is success
-
+ * cap_string - check the code for Holberton School students.
+ *@n : variable
+ * Return: return
  */
 
-char *cap_string(char *a)
-  
+char *cap_string(char *n)
 {
-  
-  int x;
-  
+int i = 0;
 
-  
-  for (x = 0; a[x] != '\0'; x++)
-    
-    {
-      
-      if (x == 0)
-	
-	{
-	  
-	  if (a[x] >= 'a' && a[x] <= 'z')
-	    
-	    {
-	      
-	      a[x] = a[x] - 32;
-	      
-	    }
-	  
-	}
-      
-      if (a[x] == ' ' || a[x] == '\n' || a[x] == ','
-	  
-	  || a[x] == '\t' || a[x] == ';' || a[x] == '.'
-	  
-	      || a[x] == '!' || a[x] == '?'
-	  
-	  || a[x] == '"' || a[x] == '(' || a[x] == ')'
-	  
-	  || a[x] == '{' || a[x] == '}')
-	
-	{
-	  
-	  if (a[x + 1] >= 'a' && a[x + 1] <= 'z')
-	    
-	    {
-	      
-	      a[x + 1] = a[x + 1] - 32;
-	      
-	    }
-	  
-	}
-      
-    }
-  
-  return (a);
-  
-=======
-/**
- * *cap_string - capitalizes all words of a string
- *
- * @a: int to check
- *
- * Return: 0 is success
- */
-char *cap_string(char *a)
+while (n[i] != '\0')
 {
-	int x;
-
-	for (x = 0; a[x] != '\0'; x++)
-	{
-		if (x == 0)
-		{
-		if (a[x] >= 'a' && a[x] <= 'z')
-		{
-			a[x] = a[x] - 32;
-		}
-		}
-		if (a[x] == ' ' || a[x] == '\n' || a[x] == ','
-		    || a[x] == '\t' || a[x] == ';' || a[x] == '.'
-		    || a[x] == '!' || a[x] == '?'
-		    || a[x] == '"' || a[x] == '(' || a[x] == ')'
-		    || a[x] == '{' || a[x] == '}')
-		{
-			if (a[x + 1] >= 'a' && a[x + 1] <= 'z')
-			{
-				a[x + 1] = a[x + 1] - 32;
-			}
-		}
-	}
-		return (a);
->>>>>>> c3b3469dba6f2c9727178bc7b5c9d0981b3470cb
+if (n[0] <= 122 && n[0] >= 97)
+{
+n[0] = n[0] - 32;
+}
+if (n[i] == 32 || n[i] == 46 || n[i] == '\t' || n[i] == '\n'
+|| n[i] == 44 || n[i] == 59 || n[i] == '!' || n[i] == '?'
+|| n[i] == '(' || n[i] == ')' || n[i] == '{' || n[i] == '}')
+{
+if (n[i + 1] <= 122 && n[i + 1] >= 97)
+{
+n[i + 1] = n[i + 1] - 32;
+}
+}
+i++;
+}
+return (n);
 }
