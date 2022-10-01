@@ -7,6 +7,7 @@
  *
  * Return: 0 is success
  */
+
 void _puts(char *str)
 {
 	int string;
