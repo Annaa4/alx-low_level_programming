@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #include "lists.h"
 
 /**
@@ -21,4 +19,3 @@ size_t print_dlistint(const dlistint_t *h)
 
 	return (nodes);
 }
->>>>>>> 8a20dd1fffbbcf3de95985cbb3ecec3148d6239c
